@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "scorecard"
+version = "0.1.0"
+description = ""
+authors = ["Evan Dunn <35546160+evanddunn@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.1.1"
+djangorestframework = "^3.15.2"
+poethepoet = "^0.28.0"
+
+[tool.poe.tasks]
+start = "poetry run python manage.py runserver"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
