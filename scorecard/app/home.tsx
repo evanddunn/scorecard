@@ -11,11 +11,12 @@ export default function Index() {
   
   const updateCards = async () => {
     console.log('in the damn ting')
-    let response = await axios.get('http://127.0.0.1:8000/api/football/fixtures/')
-    console.log('response: ', response.data)
+    // TODO: Connect to the API
+    // let response = await axios.get('http://127.0.0.1:8000/api/football/fixtures/')
+    // console.log('response: ', response.data)
     let cards = []
     for (let x = 0; x < 20; x++) {
-      cards.push(<ScoreBug key={x} teamOne={'my team'} teamTwo={'not my team'} league={'prem'} timeCode={'FT'} score={'3 - 1'} />)
+      cards.push(<ScoreBug key={x} teamOne={'my team'} teamTwo={'not my team'} league={'Premier League'} timeCode={'FT'} score={'3 - 1'} />)
     }
     setCards(cards);
   }
