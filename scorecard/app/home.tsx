@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import { Component, useEffect, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import axios from 'axios'
+import { Box } from "@/components/ui/box";
 
 
 export default function Index() {
@@ -26,14 +27,7 @@ export default function Index() {
   }, [])
 
   return (
-    <View
-      style={{
-        backgroundColor: '#FFF8F1',
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Box className="bg-background-50 items-center" >
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: '#FFF8F1' },
@@ -46,6 +40,6 @@ export default function Index() {
       <ScrollView>
         {cards}
       </ScrollView>
-    </View>
+    </Box>
   );
 }

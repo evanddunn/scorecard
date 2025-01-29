@@ -36,7 +36,7 @@ export default function Index() {
             <Text style={{ padding: 32, textAlign: 'center', fontSize: 20 }}>Scorecard is a simple sports app designed to show live scores and stats with the ability to turn ads and betting options off. </Text>
             <Link replace href="/home" asChild>
               {/* <Button color={'#7D49F8'} title="Keep Score" /> */}
-              <Button size="md" variant="solid" action="primary" >
+              <Button size="md" variant="solid" action="secondary" >
           <ButtonText>Hello World!</ButtonText>
         </Button>
             </Link>
