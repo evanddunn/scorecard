@@ -26,15 +26,12 @@ export default function Index() {
     updateCards();
   }, [])
 
-  return (
+  return ( 
     <Box className="bg-background-50 items-center" >
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: '#FFF8F1' },
           headerTitle: 'Scorecard',
-          headerTitleStyle: {
-            color: '#39744D',
-          }
         }}
       />
       <ScrollView>
