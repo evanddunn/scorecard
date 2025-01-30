@@ -37,8 +37,8 @@ export default function Index() {
             <Link replace href="/home" asChild>
               {/* <Button color={'#7D49F8'} title="Keep Score" /> */}
               <Button size="md" variant="solid" action="secondary" >
-          <ButtonText>Hello World!</ButtonText>
-        </Button>
+                <ButtonText>Hello World!</ButtonText>
+              </Button>
             </Link>
           </View>
         </View>

@@ -6,8 +6,8 @@ import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 export default function RootLayout() {
   return (
     <GluestackUIProvider mode="light"><Stack>
-        <Stack.Screen name="index" />
-        <Stack.Screen name="home" />
-      </Stack></GluestackUIProvider>
+      <Stack.Screen name="index" />
+      <Stack.Screen name="home" />
+    </Stack></GluestackUIProvider>
   );
 }
