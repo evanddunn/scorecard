@@ -4,10 +4,11 @@ import { Component, useEffect, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import axios from 'axios'
 import { Box } from "@/components/ui/box";
+import { scoresExample } from "@/components/scores_example";
 
 
 export default function Index() {
-  const [cards, setCards] = useState([<ScoreBug teamOne={'my team'} teamTwo={'not my team'} league={'prem'} timeCode={'FT'} score={'3 - 1'} />,])
+  const [cards, setCards] = useState(null)
 
 
   const updateCards = async () => {
@@ -16,8 +17,18 @@ export default function Index() {
     // let response = await axios.get('http://127.0.0.1:8000/api/football/fixtures/')t
     // console.log('response: ', response.data)
     let cards = []
-    for (let x = 0; x < 20; x++) {
-      cards.push(<ScoreBug key={x} teamOne={'my team'} teamTwo={'not my team'} league={'Premier League'} timeCode={'FT'} score={'3 - 1'} />)
+    for (let score of scoresExample) {
+      cards.push(<ScoreBug
+        key={cards.length}
+        teamOne={score.home.name} 
+        teamTwo={score.away.name} 
+        league={score.league} 
+        timeCode={score.time} 
+        score={score.score} 
+        date={score.date} 
+        venue={score.venue} 
+        referees={score.referees} 
+        attendance={score.attendance} status={score.status} />)
     }
     setCards(cards);
   }
@@ -26,11 +37,10 @@ export default function Index() {
     updateCards();
   }, [])
 
-  return ( 
-    <Box className="bg-background-50 items-center" >
+  return (
+    <Box className="bg-background-50 items-center h-full" >
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: '#FFF8F1' },
           headerTitle: 'Scorecard',
         }}
       />
